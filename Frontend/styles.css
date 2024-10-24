@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #3f51b5;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    padding: 2em;
+}
+
+.table-section {
+    background-color: white;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.table-header h2 {
+    margin: 0;
+}
+
+.table-header .actions {
+    display: flex;
+    gap: 1em;
+}
+
+#search {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #303f9f;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+th, td {
+    padding: 0.75em;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination button {
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    padding: 0.5em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #303f9f;
+}
+
+/* Modal Background */
+.modal {
+    display: flex; /* To show modal */
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000; /* High z-index to overlay other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px; /* Adjust width as needed */
+    max-width: 90%; /* Responsive width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Form Styles */
+#asset-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between form fields */
+}
+
+#asset-form label {
+    font-size: 14px;
+    color: #555;
+}
+
+#asset-form input[type="text"],
+#asset-form input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Submit Button */
+#save-asset {
+    background-color: #3f51b5; /* Match the blue header */
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#save-asset:hover {
+    background-color: #303f9f; /* Darker blue on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+#modal-container1 {
+    display: none; /* Hidden by default */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #af5b5b;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assets Management</title>
+    <link rel="stylesheet" href="styles.css">
+    
+
+    
+</head>
+<body>
+    <header>
+        <h1>Asset (Create, Read, Delete)</h1>
+    </header>
+    <main>
+        <section class="table-section">
+            <div class="table-header">
+                <h2>Assets</h2>
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="Enter asset Id" />
+                    <button type="submit">Search</button>
+                </form>
+                <div class="actions">                   
+                    <button id="create-asset">Create Asset</button>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Id</th>
+                        <th>Owner</th>
+                        <th>Color</th>
+                        <th>Appraised Value($)</th>
+                        <th>Size</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be dynamically added here using JavaScript -->
+                </tbody>
+            </table>
+            <div class="pagination">
+                <span id="items-info">Items per page: 10</span>
+                <button id="prev-page">&lt;</button>
+                <span id="page-info">Page 1</span>
+                <button id="next-page">&gt;</button>
+            </div>
+        </section>
+        
+
+        <div id="modal-container1">
+            <div id="modal-content1"></div>
+            <br><br>
+            <button id="close-button1">Close</button>
+        </div>
+
+
+        
+
+
+        <!-- Modal and Overlay -->
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="close-modal">&times;</span>
+                <h2>Asset Creation</h2>
+                <form id="asset-form">
+                    <label for="assetID">AssetID</label>
+                    <input type="text" id="assetID" required>
+
+                    <label for="color">Color</label>
+                    <input type="text" id="color" required>
+
+                    <label for="owner">Owner</label>
+                    <input type="text" id="owner" required>
+
+                    <label for="size">Size</label>
+                    <input type="number" id="size" required>
+
+                    <label for="appraised-value">Appraised Value</label>
+                    <input type="number" id="appraised-value" required>
+                    
+                    <button type="submit" id="save-asset">Create</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+    
+    
+    <script src="app.js"></script>
+</body>
+</html>
